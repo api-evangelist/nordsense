@@ -1,25 +1,75 @@
 aid: nordsense
+
 name: Nordsense
-description: 'Nordsense is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio;
-  backed by nea) and added to the network as a stub for full-pipeline profiling.'
+
+image: https://nordsense.com/wp-content/uploads/2023/05/Site-Image.png
+
+description: 'Nordsense provides smart sensor solutions for waste management, delivering real‑time data insights to municipalities and businesses. Their IoT‑enabled smart bin sensors track fill levels, location, and routing, helping reduce carbon emissions, increase recycling rates, and improve operational transparency. By digitizing waste collection, Nordsense enables data‑driven decisions that optimize routes, lower fuel use, and enhance sustainability outcomes across urban environments.'
+
 url: https://raw.githubusercontent.com/api-evangelist/nordsense/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-22 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-22'
+
 modified: '2026-10-22'
+
 tags:
 - Company
-apis: []
+- Sensors
+- WasteManagement
+- IoT
+- DataInsights
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-x-backed-by:
-- nea
+
 common:
+- type: Vendors
+  url: vendors/nordsense-vendors.yml
+- type: Hosts
+  url: hosts/nordsense-hosts.yml
+- type: PrivacyPolicy
+  url: https://nordsense.com/privacy-policy/
+- type: Newsroom
+  url: https://nordsense.com/press/
+- type: Login
+  url: https://nordsense.com/log-in/
+- type: Documentation
+  url: https://developers.nordsense.com/
+- type: GitHubOrganization
+  url: https://github.com/nordsense
+- type: DomainSecurity
+  url: security/nordsense-domain-security.yml
 - type: Website
   url: https://nordsense.com
+
+apis: []
+
+x-backed-by:
+- nea
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: The provider's website does not expose any machine‑readable API contract such as OpenAPI, GraphQL SDL, or WSDL.
+  evidence:
+    - url: https://nordsense.com
+      status: 200
+  checked: '2026-10-22'
+x-enrichment:
+  date: '2026-10-22'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
